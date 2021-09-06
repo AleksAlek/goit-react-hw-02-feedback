@@ -2,17 +2,15 @@ import React from "react";
 
 import { PropTypes } from "prop-types";
 
-import "./FeedbackOptions.styles.css";
+import styles from "./FeedbackOptions.module.css";
 
 const FeedbackOptions = ({ handleFeedback, options }) => {
   return (
-    <div className="controls-container">
+    <div className={styles.controlsContainer}>
       {options.map((option) => {
-        const classes = "control control-" + option;
-
         return (
           <button
-            className={classes}
+            className={styles.control}
             key={option}
             onClick={() => handleFeedback(option)}
           >
